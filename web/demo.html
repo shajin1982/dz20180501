@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jQueryDownload/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap-select/dist/css/bootstrap-select.css">
+    <script src="bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <link rel="stylesheet" href="layui-v2.4.5/layui/css/layui.css">
+    <script src="layui-v2.4.5/layui/layui.all.js"></script>
+    <style>
+        a {
+            color: #2aabd2;
+        }
+
+        i {
+            color: #2aabd2;
+        }
+    </style>
+</head>
+<body>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="image/logo.png"/>
+        </div>
+        <div class="col-md-3">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <div>
+                        <a class="btn" href="#">
+                            <i class="fa fa-weixin fa-3x"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <h6>扫一扫，访问微社区</h6>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <a class="btn" href="#">
+                            <i class="fa fa-qq fa-3x"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <h6>只需一步，快速开始</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row text-center">
+                <div class="col-md-3 text-right">
+                    <div class="row">
+                        <select style="width:50%;height:33px">
+                            <option>用户名</option>
+                            <option>Email</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <h5 style="margin:15px">密码</h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" style="margin-bottom: 2px">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <div class="row text-left" style="margin-top:5px;margin-bottom: 3px">
+                        <input type="checkbox">自动登录
+                    </div>
+                    <div class="row text-left">
+                        <button class="layui-btn layui-btn-primary">登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="row" style="margin-top: 10px"><a href="#">找回密码</a></div>
+            <div class="row" style="margin-top: 10px"><a href="#">立即注册</a></div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">论坛首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            文档资料<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">教程</a></li>
+                            <li><a href="#">开发文档</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">腾讯云主机</a>
+                    <li><a href="#">Discuz! 实验室</a>
+                    <li><a href="#">服务购买</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            应用中心<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Discuz!应用中心</a></li>
+                            <li><a href="#">Discuz!开放平台</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            微社区<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Discuz!打通版</a></li>
+                            <li><a href="#">标准版</a></li>
+                            <li><a href="#">本地化部署版（第三版）</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">在线体验</a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="row bg-info">
+        <div class="col-md-4">
+            <div class="input-group">
+                <input class="form-control" type="text" style="height: 45px">
+                <span class="input-group-addon">
+                    <select style="height: 30px">
+                            <option>帖子</option>
+                            <option>用户</option>
+                    </select>
+                </span>
+                <span class="input-group-addon">
+                    <a class="btn btn-danger" href="#"><i class="fa fa-search-plus"></i> </a>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8" style="margin-top: 15px ">
+            <label>热搜：</label>
+            <a href="#">网页游戏</a>
+            <a href="#">婚纱</a>
+            <a href="#">推广</a>
+            <a href="#">聊天室</a>
+            <a href="#">游戏</a>
+            <a href="#">婚纱摄影</a>
+            <a href="#">积分商城</a>
+            <a href="#">搬家</a>
+            <a href="#">同城交友</a>
+            <a href="#">客户端</a>
+            <a href="#">旅游招聘</a>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span>立即注册</span>
+                <span class="pull-right"><a>已有账号？现在登录</a></span>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        邀请码：
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <input type="text" />
+                    </div>
+                </div>
+                <hr class="layui-bg-gray">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        用户名：
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <input type="text" />
+                    </div>
+                </div>
+                <hr class="layui-bg-gray">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        密码：
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <input type="text" />
+                    </div>
+                </div>
+                <hr class="layui-bg-gray">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        确认密码：
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <input type="text" />
+                    </div>
+                </div>
+                <hr class="layui-bg-gray">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        Email：
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <input type="text" />
+                    </div>
+                </div>
+                <hr class="layui-bg-gray">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        验证码：
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <input type="text" />
+                    </div>
+                </div>
+                <hr class="layui-bg-gray">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <input type="button" value="提交">
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <input type="checkbox">
+                        同意网站服务条款
+                    </div>
+                </div>
+                <hr class="layui-bg-gray">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        快捷登录:
+                        <a class="btn" href="#">
+                            <i class="fa fa-weixin fa-3x"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <a class="btn" href="#">
+                            <i class="fa fa-qq fa-3x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    </div>
+</div>
+</body>
+</html>
