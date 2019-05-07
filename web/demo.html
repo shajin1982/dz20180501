@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="jQueryDownload/jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrapvalidator-0.4.5/dist/css/bootstrapValidator.css">
+    <script src="jQueryDownload/jquery-3.1.1.min.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="bootstrapvalidator-0.4.5/dist/js/bootstrapValidator.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="bootstrap-select/dist/css/bootstrap-select.css">
     <script src="bootstrap-select/dist/js/bootstrap-select.js"></script>
     <link rel="stylesheet" href="layui-v2.4.5/layui/css/layui.css">
@@ -166,85 +168,92 @@
                 <span>立即注册</span>
                 <span class="pull-right"><a>已有账号？现在登录</a></span>
             </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-6 text-right">
-                        邀请码：
+            <form id="defaultForm" method="post" class="form-horizontal">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                邀请码：
+                            </div>
+                            <div class="col-md-6 text-left">
+
+                                <input type="text" name="yqm"/>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 text-left">
-                        <input type="text"/>
+                    <hr class="layui-bg-gray">
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            用户名：
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text"/>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            密码：
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text"/>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            确认密码：
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text"/>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            Email：
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text"/>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            验证码：
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text"/>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <div class="form-group">
+                                <input type="button" value="提交" id="validateBtn">
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="checkbox">
+                            同意网站服务条款
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            快捷登录:
+                            <a class="btn" href="#">
+                                <i class="fa fa-weixin fa-3x"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <a class="btn" href="#">
+                                <i class="fa fa-qq fa-3x"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <hr class="layui-bg-gray">
-                <div class="row">
-                    <div class="col-md-6 text-right">
-                        用户名：
-                    </div>
-                    <div class="col-md-6 text-left">
-                        <input type="text"/>
-                    </div>
-                </div>
-                <hr class="layui-bg-gray">
-                <div class="row">
-                    <div class="col-md-6 text-right">
-                        密码：
-                    </div>
-                    <div class="col-md-6 text-left">
-                        <input type="text"/>
-                    </div>
-                </div>
-                <hr class="layui-bg-gray">
-                <div class="row">
-                    <div class="col-md-6 text-right">
-                        确认密码：
-                    </div>
-                    <div class="col-md-6 text-left">
-                        <input type="text"/>
-                    </div>
-                </div>
-                <hr class="layui-bg-gray">
-                <div class="row">
-                    <div class="col-md-6 text-right">
-                        Email：
-                    </div>
-                    <div class="col-md-6 text-left">
-                        <input type="text"/>
-                    </div>
-                </div>
-                <hr class="layui-bg-gray">
-                <div class="row">
-                    <div class="col-md-6 text-right">
-                        验证码：
-                    </div>
-                    <div class="col-md-6 text-left">
-                        <input type="text"/>
-                    </div>
-                </div>
-                <hr class="layui-bg-gray">
-                <div class="row">
-                    <div class="col-md-6 text-right">
-                        <input type="button" value="提交">
-                    </div>
-                    <div class="col-md-6 text-left">
-                        <input type="checkbox">
-                        同意网站服务条款
-                    </div>
-                </div>
-                <hr class="layui-bg-gray">
-                <div class="row">
-                    <div class="col-md-6 text-right">
-                        快捷登录:
-                        <a class="btn" href="#">
-                            <i class="fa fa-weixin fa-3x"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-6 text-left">
-                        <a class="btn" href="#">
-                            <i class="fa fa-qq fa-3x"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
     <div class="row">
@@ -357,17 +366,42 @@
                 '\n' +
                 '康盛公司',//这里content是一个普通的String
             // #endregion
-            yes: function(index, layero){
+            yes: function (index, layero) {
                 layer.close(index)
                 //LAY_layuipro.close()
                 //按钮【按钮一】的回调
             },
-            btn2: function(index, layero){
+            btn2: function (index, layero) {
                 alert('111111')
                 //LAY_layuipro.close()
                 //按钮【按钮二】的回调
             }
         });
+        $('form').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                yqm: {
+                    message: '邀请码验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '邀请码不能为空'
+                        }
+                    }
+                },
+            }
+        })
+        $('#validateBtn').click(function () {
+            $('#defaultForm').bootstrapValidator('validate');
+            if (!$('#defaultForm').data("bootstrapValidator").isValid()) {
+                return;
+            }
+            ;
+        })
     })
 </script>
 </body>
