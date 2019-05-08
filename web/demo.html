@@ -239,12 +239,10 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6 text-right">
-                                <div class="form-group">
                                     <input type="button" value="提交" id="validateBtn">
-                                </div>
                             </div>
                             <div class="col-md-6 text-left">
-                                <input type="checkbox">
+                                <input type="checkbox" name="ck">
                                 同意网站服务条款
                             </div>
                         </div>
@@ -467,6 +465,11 @@
                         }
                     }
                 },
+                // ck: {//check控件选择的数量
+                //     min: 1,
+                //     //max: 4,
+                //     message: '必须选择2-4个选项'
+                // }
             }
         })
         $('#validateBtn').click(function () {
