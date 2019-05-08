@@ -180,66 +180,77 @@
                                 邀请码：
                             </div>
                             <div class="col-md-6 text-left">
-
                                 <input type="text" name="yqm"/>
                             </div>
                         </div>
                     </div>
                     <hr class="layui-bg-gray">
-                    <div class="row">
-                        <div class="col-md-6 text-right">
-                            用户名：
-                        </div>
-                        <div class="col-md-6 text-left">
-                            <input type="text"/>
-                        </div>
-                    </div>
-                    <hr class="layui-bg-gray">
-                    <div class="row">
-                        <div class="col-md-6 text-right">
-                            密码：
-                        </div>
-                        <div class="col-md-6 text-left">
-                            <input type="text"/>
-                        </div>
-                    </div>
-                    <hr class="layui-bg-gray">
-                    <div class="row">
-                        <div class="col-md-6 text-right">
-                            确认密码：
-                        </div>
-                        <div class="col-md-6 text-left">
-                            <input type="text"/>
-                        </div>
-                    </div>
-                    <hr class="layui-bg-gray">
-                    <div class="row">
-                        <div class="col-md-6 text-right">
-                            Email：
-                        </div>
-                        <div class="col-md-6 text-left">
-                            <input type="text"/>
-                        </div>
-                    </div>
-                    <hr class="layui-bg-gray">
-                    <div class="row">
-                        <div class="col-md-6 text-right">
-                            验证码：
-                        </div>
-                        <div class="col-md-6 text-left">
-                            <input type="text"/>
-                        </div>
-                    </div>
-                    <hr class="layui-bg-gray">
-                    <div class="row">
-                        <div class="col-md-6 text-right">
-                            <div class="form-group">
-                                <input type="button" value="提交" id="validateBtn">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                用户名：
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <input type="text" name="yhm"/>
                             </div>
                         </div>
-                        <div class="col-md-6 text-left">
-                            <input type="checkbox">
-                            同意网站服务条款
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                密码：
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <input type="password" name="mm"/>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                确认密码：
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <input type="password" name="qrmm"/>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                Email：
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <input type="text" name="email"/>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                验证码：
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <input type="text" name="yzm"/>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="layui-bg-gray">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                <div class="form-group">
+                                    <input type="button" value="提交" id="validateBtn">
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <input type="checkbox">
+                                同意网站服务条款
+                            </div>
                         </div>
                     </div>
                     <hr class="layui-bg-gray">
@@ -389,11 +400,74 @@
                 validating: 'glyphicon glyphicon-refresh'
             },
             fields: {
-                yqm: {
+                yqm: {//邀请码
                     message: '邀请码验证失败',
                     validators: {
                         notEmpty: {
                             message: '邀请码不能为空'
+                        }
+                    }
+                },
+                yhm: {//用户名
+                    message: '用户名验证失败',
+                    validators: {
+                        notEmpty: {//非空
+                            message: '用户名不能为空'
+                        },
+                        stringLength: {//检测长度
+                            min: 3,
+                            //max: 30,
+                            message: '用户名不得小于 3 个字符'
+                        },
+                    }
+                },
+                mm: {//密码
+                    message: '密码验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '密码不能为空'
+                        },
+                        stringLength: {//检测长度
+                            min: 8,
+                            //max: 30,
+                            message: '最小长度为 8 个字符'
+                        },
+                        identical: {//密码一致性
+                            field: 'qrmm',
+                            message: '两次输入的密码不相符'
+                        },
+                    }
+                },
+                qrmm: {//确认密码
+                    message: '确认密码验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '确认密码不能为空'
+                        },
+                        stringLength: {//检测长度
+                            min: 8,
+                            //max: 30,
+                            message: '最小长度为 8 个字符'
+                        },
+                        identical: {//密码一致性
+                            field: 'mm',
+                            message: '两次输入的密码不相符'
+                        },
+                    }
+                },
+                email: {
+                    message: 'Email验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: 'Email不能为空'
+                        }
+                    }
+                },
+                yzm: {
+                    message: '验证码验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '验证码不能为空'
                         }
                     }
                 },
