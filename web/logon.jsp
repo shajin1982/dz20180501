@@ -21,6 +21,8 @@
     <script src="layui-v2.4.5/layui/layui.all.js"></script>
     <link rel="stylesheet" href="layer-v3.1.1/layer/mobile/need/layer.css">
     <script src="layer-v3.1.1/layer/layer.js"></script>
+    <link rel="stylesheet" href="CodeSeven-toastr-50092cc/build/toastr.min.css">
+    <script src="CodeSeven-toastr-50092cc/build/toastr.min.js"></script>
     <style>
         a {
             color: #2aabd2;
