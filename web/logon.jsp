@@ -478,7 +478,44 @@
             if (!$('#defaultForm').data("bootstrapValidator").isValid()) {
                 return;
             }
-            ;
+            $.ajax({
+                type: "post",
+                url: "logonServlet",
+                data: $("form").serialize(),
+                dataType: "text",
+                success: function (data) {
+                    var json = eval('(' + data + ')');
+                    //alert(json.name);
+                    toastr.options = {
+                        "positionClass": "toast-top-center",//弹出窗的位置
+                    };
+                    if(json.name=='0'){
+                        toastr.warning('此用户名已经存在!', '非常遗憾');
+                    }else if(json.name=='1'){
+                        toastr.info('你已经成功注册！', '恭喜');
+                    }else{
+                        toastr.error('未知的可怕错误', 'Error');
+                    }
+                    /* toastr.success('Hello world!', 'Toastr fun!');
+                    toastr.info('We are open today from 10 to 22', 'Information');
+                    toastr.error('Your credentials are gone', 'Error');
+                    toastr.warning('Your computer is about to explode!', 'Warning');
+                    toastr.clear([toast]);//关闭提示框　
+                    toastr.active();//获取当前显示的提示框
+                    toastr.refreshTimer(toast, 5000);//刷新打开的提示框（第二个参数配置超时时间） */
+                    /* toast-top-left	顶端左边
+                    toast-top-right 	顶端右边
+                    toast-top-center	顶端中间
+                    toast-top-full-width	顶端中间(宽度铺满)
+                    toast-bottom-right 	底部右边
+                    toast-bottom-left 	底部左边
+                    toast-bottom-center 	底部中间
+                    toast-bottom-full-width	底部中间(宽度铺满) */
+                },
+                error: function (xhr) {
+                    alert("错误提示： " + xhr.status + " " + xhr.statusText);
+                }
+            });
         })
     })
 </script>
